@@ -145,7 +145,7 @@ if(isset($_POST['login'])) {
             <?php if(isset($error)) echo "<p class='error'>$error</p>"; ?>
             <form method="post" action="">
                 <label for="username">Tên đăng nhập:</label>
-                <input value="adminadmin" type="text" id="username" name="username" required>
+                <input value="admin" type="text" id="username" name="username" required>
                 
                 <label for="password">Mật khẩu:</label>
                 <input value="123" type="password" id="password" name="password" required>
