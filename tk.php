@@ -420,6 +420,7 @@ $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <tr>
                     <th>ID</th>
                     <th>Tên đăng nhập</th>
+                    <th>Mật khẩu</th>
                     <th>Họ và tên</th>
                     <th>Vai trò</th>
                     <th>Created At</th>
@@ -433,6 +434,7 @@ $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <tr>
                             <td><?php echo htmlspecialchars($account['user_id']); ?></td>
                             <td><?php echo htmlspecialchars($account['username']); ?></td>
+                            <td><?php echo htmlspecialchars($account['password']); ?></td>
                             <td><?php echo htmlspecialchars($account['full_name']); ?></td>
                             <td><?php echo htmlspecialchars($account['role']); ?></td>
                             <td><?php echo htmlspecialchars($account['created_at']); ?></td>
@@ -458,7 +460,7 @@ $accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </div>
                                     <div class="form-group">
                                         <label>Mật khẩu:</label>
-                                        <input type="password" name="password" placeholder="Để trống nếu không thay đổi">
+                                        <input type="password" name="password" value="<?php echo htmlspecialchars($account['password']); ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Họ và tên:</label>
